@@ -1,0 +1,200 @@
+*,
+html {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+}
+
+body .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+body .center i {
+  font-size: 30px;
+}
+
+body .control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #99a799;
+  border-radius: 20px 20px 0px 0px;
+  padding: 5px 15px;
+  padding-top: 8px;
+}
+
+body .control div {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+body .view {
+  background-color: #99a799;
+  width: 500px;
+  border-radius: 0px 0px 20px 20px;
+  padding: 0px 20px;
+  margin-top: 3px;
+}
+
+body .view .overview {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .view .overview .time {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 15px;
+}
+
+body .view .overview .start {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 6px 25px;
+  cursor: pointer;
+}
+
+body .view .overview .reset {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+body .view .overview .btn {
+  border: 1.5px solid #d3e4cd;
+  border-radius: 20px;
+  padding: 6px 25px;
+}
+
+body .view .overview .btn:hover {
+  background-color: #adc2a9;
+}
+
+body .view .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin: 0px 10px;
+}
+
+body .view .section div {
+  text-align: center;
+  border-bottom: 3px solid transparent;
+  padding: 0px 10px;
+  cursor: pointer;
+  width: 30%;
+}
+
+body .view .section div:hover {
+  border-bottom: 3px solid #adc2a9;
+}
+
+body .view .section div.actived {
+  border-bottom: 3px solid #adc2a9;
+}
+
+body .settings {
+  background-color: #d3e4cd;
+  width: 500px;
+  padding: 0px 20px;
+  overflow: hidden;
+}
+
+body .settings .input {
+  padding-top: 10px;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .settings .input input {
+  height: 50px;
+  width: 20%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 3px solid currentColor;
+  padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+  color: currentColor;
+  background: transparent;
+  border-radius: var(--size-radius);
+}
+
+body .settings .input input:focus + .input__label, body .settings .input input:not(:placeholder-shown) + .input__label {
+  -webkit-transform: translate(0.25rem, -65%) scale(0.8);
+          transform: translate(0.25rem, -65%) scale(0.8);
+  color: green;
+}
+
+body .settings .input__label {
+  left: 0;
+  top: 0;
+  padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * 0.5);
+  margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * 0.5);
+  background: pink;
+  white-space: nowrap;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  background: var(--color-background);
+  -webkit-transition: -webkit-transform 120ms ease-in;
+  transition: -webkit-transform 120ms ease-in;
+  transition: transform 120ms ease-in;
+  transition: transform 120ms ease-in, -webkit-transform 120ms ease-in;
+  font-size: 10px;
+  line-height: 1.2;
+}
+/*# sourceMappingURL=styles.css.map */
