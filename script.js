@@ -1,12 +1,16 @@
 //<i class='bx bxs-quote-single-right'></i>
 
 $(document).ready(function () {
+  //init
+
+  let pause = true;
+  let totalSeconds = 0;
+
   //section click changes
   $(".section div").click(function () {
     $(".section div").removeClass("actived");
     $(this).addClass("actived");
   });
-  let pause = true;
   $(".start").click(function () {
     if (pause) {
       pause = false;
@@ -17,6 +21,10 @@ $(document).ready(function () {
       stopTimer();
       $(".start").text("Start");
     }
+  });
+
+  $(".input input").keyup(function () {
+    updateOverview(getInput());
   });
 
   function formattime(totalSeconds) {
@@ -30,23 +38,26 @@ $(document).ready(function () {
       console.log(pause);
       if (pause) return;
       totalSeconds--;
-      $(".time").text(updateInputs(formattime(totalSeconds)));
+      updateOverview(formattime(totalSeconds));
 
       if (totalSeconds <= 0) {
         stopTimer();
       }
     }, 1000);
   }
-  function updateInputs(Input) {
+  function updateOverview(Input) {
     let newtime = "";
     Input[0] > 0 ? (newtime = newtime + `${Input[0]}:`) : (newtime = newtime);
     Input[1] > 0 ? (newtime = newtime + `${Input[1]}:`) : (newtime = newtime);
     Input[2] > 0 ? (newtime = newtime + `${Input[2]}`) : (newtime = newtime);
-    console.log(newtime);
-    return newtime;
+    $(".time").text(newtime);
   }
 
   function stopTimer() {
     interval = clearInterval(interval);
+  }
+
+  function getInput() {
+    return [$("#hours").val(), $("#minutes").val(), $("#seconds").val()];
   }
 });
