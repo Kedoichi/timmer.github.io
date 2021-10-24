@@ -20,23 +20,41 @@
         <div class="switch"><i class="bx bxs-brightness"></i></div>
         <div class="close"><i class="bx bx-minus"></i></div>
       </div>
-      <div class="view">
-        <div class="overview">
-          <div class="time">5:00</div>
-          <div class="start btn">Start</div>
-          <div class="reset"><i class="bx bx-reset"></i></div>
-        </div>
-        <div class="section">
-          <div class="pomodore actived">Pomodore</div>
-          <div class="shortBreak">Short Break</div>
-          <div class="longBreak">Long Break</div>
-        </div>
-      </div>
-      <div class="settings">
-        <div class="input">
-          <input type="number" id="hours" value="1" min="0" max="23" />:
-          <input type="number" id="minutes" value="1" min="0" max="59" />:
-          <input type="number" id="seconds" value="1" min="00" max="59" />
+      <div class="container">
+        <div class="view">
+          <div class="overview">
+            <div class="time">20:00</div>
+            <div class="setting hide">
+              <div class="h1">
+                <i class="bx bxs-up-arrow up"></i>
+                <input type="number" maxlength="1" />
+                <i class="bx bxs-down-arrow down"></i>
+              </div>
+              <div class="h2">
+                <i class="bx bxs-up-arrow up"></i>
+                <input type="number" maxlength="1" />
+                <i class="bx bxs-down-arrow down"></i>
+              </div>
+
+              :
+              <div class="s1">
+                <i class="bx bxs-up-arrow up"></i>
+                <input type="number" maxlength="1" />
+                <i class="bx bxs-down-arrow down"></i>
+              </div>
+              <div class="s2">
+                <i class="bx bxs-up-arrow up"></i>
+                <input type="number" maxlength="1" />
+                <i class="bx bxs-down-arrow down"></i>
+              </div>
+            </div>
+            <div class="start btn">Start</div>
+            <div class="reset"><i class="bx bx-reset"></i></div>
+          </div>
+          <div class="section">
+            <div class="pomodore actived" id="1">Pomodore</div>
+            <div class="longBreak" id="2">Custom Break</div>
+          </div>
         </div>
       </div>
     </div>
