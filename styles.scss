@@ -76,7 +76,6 @@ body {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-
         &.hide {
           display: none;
         }
@@ -86,6 +85,8 @@ body {
           border-radius: 5px;
           padding: 0px 8px;
           margin: 3px 0px;
+          cursor: pointer;
+
           &:hover {
             background-color: $components;
           }
