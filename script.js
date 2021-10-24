@@ -154,4 +154,6 @@ $(document).ready(function () {
     else value--;
     $(`.${obj} input`).val(value);
   }
+
+  // DRAG
 });
