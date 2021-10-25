@@ -42,7 +42,7 @@ body {
     justify-content: flex-end;
     background-color: $Darkness;
     border-radius: 20px 20px 0px 0px;
-    width: 400px;
+    width: 350px;
     padding: 5px 15px;
     padding-top: 8px;
     font-size: 20px;
@@ -57,7 +57,7 @@ body {
 
   .view {
     background-color: $Darkness;
-    width: 400px;
+    width: 350px;
     border-radius: 0px 0px 20px 20px;
     padding: 0px 20px;
     margin-top: 3px;
@@ -71,7 +71,7 @@ body {
       .time {
         flex: 8;
         text-align: center;
-        font-size: 50px;
+        font-size: 40px;
         letter-spacing: 15px;
         &.hide {
           display: none;
@@ -150,7 +150,7 @@ body {
       margin: 0px 5px;
       font-size: 16px;
       text-transform: uppercase;
-      line-height: 30px;
+      line-height: 20px;
 
       div {
         text-align: center;
