@@ -1,39 +1,57 @@
-maxW = $(".container").outerWidth();
-maxH = $(".container").outerHeight();
+const dragElements = document.querySelectorAll("#drag");
+containerW = $(".container").outerWidth();
+containerH = $(".container").outerHeight();
 
-const dragElementss = document.querySelectorAll("#drag");
-dragElementss.forEach((dragElement) => {
-  MaxXMove = maxW - $("#drag").outerWidth() / 2;
-  MaxYMove = maxH - $("#drag").outerHeight() / 2;
-  MinXMove = 0 + $("#drag").outerWidth() / 2;
-  MinYMove = 0 + $("#drag").outerHeight() / 2;
+a = document.querySelector("#drag");
+
+dragElements.forEach((dragElement) => {
+  var mouseX = 0,
+    mouseY = 0,
+    moveXby = 0,
+    moveYby = 0;
+  var RightEdge, LeftEdge, TopEdge, BottomEdge;
 
   if (document.getElementById(dragElement.id + "header")) {
-    // if present, the header is where you move the DIV from:
     document.getElementById(dragElement.id + "header").onmousedown =
       dragMouseDown;
   } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
     dragElement.onmousedown = dragMouseDown;
   }
 
   function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    mouseX = e.clientX;
+    mouseY = e.clientY;
     document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
   }
   function elementDrag(e) {
-    if (e.clientY > MaxYMove) dragElement.style.top = MaxYMove + "px";
-    else dragElement.style.top = e.clientY + "px";
-    if (e.clientX > MaxXMove) dragElement.style.left = MaxXMove + "px";
-    else dragElement.style.left = e.clientX + "px";
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    moveXby = e.clientX - mouseX;
+    moveYby = e.clientY - mouseY;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 
-    if (e.clientY < MinYMove) dragElement.style.top = MinYMove + "px";
-    if (e.clientX < MinXMove) dragElement.style.left = MinXMove + "px";
+    RightEdge = dragElement.offsetLeft + dragElement.offsetWidth + moveXby;
+    LeftEdge = dragElement.offsetLeft + moveXby;
+
+    BottomEdge = dragElement.offsetTop + dragElement.offsetHeight + moveYby;
+    TopEdge = dragElement.offsetTop + moveYby;
+    console.log(TopEdge + "-" + BottomEdge);
+
+    if (RightEdge <= containerW && LeftEdge >= 0)
+      dragElement.style.left = dragElement.offsetLeft + moveXby + "px";
+    if (BottomEdge <= containerH && TopEdge >= 0)
+      dragElement.style.top = dragElement.offsetTop + moveYby + "px";
+
+    if (e.clientX < 0) dragElement.style.left = 0 + "px";
   }
 
   function closeDragElement() {
-    // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
   }
