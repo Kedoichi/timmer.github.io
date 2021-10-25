@@ -39,7 +39,6 @@ dragElements.forEach((dragElement) => {
 
     BottomEdge = dragElement.offsetTop + dragElement.offsetHeight + moveYby;
     TopEdge = dragElement.offsetTop + moveYby;
-    console.log(TopEdge + "-" + BottomEdge);
 
     if (RightEdge <= containerW && LeftEdge >= 0)
       dragElement.style.left = dragElement.offsetLeft + moveXby + "px";
