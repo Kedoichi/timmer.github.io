@@ -28,7 +28,6 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
   }
   .center {
@@ -124,6 +123,9 @@ body {
         width: 40px;
         cursor: pointer;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .reset {
         flex: 0.5;
