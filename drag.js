@@ -2,8 +2,6 @@ const dragElements = document.querySelectorAll("#drag");
 containerW = $(".container").outerWidth();
 containerH = $(".container").outerHeight();
 
-a = document.querySelector("#drag");
-
 dragElements.forEach((dragElement) => {
   var mouseX = 0,
     mouseY = 0,
