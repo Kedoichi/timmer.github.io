@@ -1,0 +1,243 @@
+*,
+html {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+}
+
+body input::-webkit-outer-spin-button,
+body input::-webkit-inner-spin-button,
+html input::-webkit-outer-spin-button,
+html input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body .container {
+  height: 100vh;
+  width: 100vw;
+}
+
+body .drag {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+}
+
+body .center {
+  font-size: 20px;
+}
+
+body .center i {
+  font-size: 30px;
+}
+
+body .control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #99a799;
+  border-radius: 20px 20px 0px 0px;
+  width: 350px;
+  padding: 5px 15px;
+  padding-top: 8px;
+  font-size: 20px;
+}
+
+body .control i {
+  font-size: 30px;
+}
+
+body .control div {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+body .view {
+  background-color: #99a799;
+  width: 350px;
+  border-radius: 0px 0px 20px 20px;
+  padding: 0px 20px;
+  margin-top: 3px;
+}
+
+body .view .overview {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+body .view .overview .time {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 15px;
+}
+
+body .view .overview .time.hide {
+  display: none;
+}
+
+body .view .overview .setting {
+  font-size: 40px;
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .view .overview .setting.hide {
+  display: none;
+}
+
+body .view .overview .setting i {
+  font-size: 12px;
+  border: 1.5px solid #d3e4cd;
+  border-radius: 5px;
+  padding: 0px 8px;
+  margin: 3px 0px;
+  cursor: pointer;
+}
+
+body .view .overview .setting i:hover {
+  background-color: #adc2a9;
+}
+
+body .view .overview .setting input {
+  background-color: #adc2a9;
+  width: 20px;
+  border: 0px transparent;
+  border-radius: 3px;
+  height: 25px;
+  width: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+body .view .overview .setting div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .view .overview .start {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 6px 25px;
+  width: 40px;
+  cursor: pointer;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .view .overview .reset {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+body .view .overview .btn {
+  border: 1.5px solid #d3e4cd;
+  border-radius: 20px;
+  padding: 6px 25px;
+}
+
+body .view .overview .btn:hover {
+  background-color: #adc2a9;
+}
+
+body .view .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+
+body .view .section div {
+  text-align: center;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+
+body .view .section div:hover {
+  border-bottom: 3px solid #adc2a9;
+}
+
+body .view .section div.actived {
+  border-bottom: 3px solid #adc2a9;
+  background-color: #d3e4cd;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+/*# sourceMappingURL=styles.css.map */
